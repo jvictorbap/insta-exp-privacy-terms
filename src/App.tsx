@@ -39,7 +39,7 @@ const SECTIONS: Section[] = [
   {
     title: 'Resumo rápido',
     description:
-      'A extensão processa dados mínimos para entregar as funcionalidades prometidas. Você pode usar e desinstalar a qualquer momento.',
+      'A extensão processa apenas os dados necessários para entregar as funcionalidades prometidas. Você pode usar, controlar e desinstalar a qualquer momento.',
     items: [
       'Não coletamos senha, mensagens privadas ou conteúdo de mídia do Instagram.',
       'Não vendemos dados de usuários.',
@@ -52,8 +52,9 @@ const SECTIONS: Section[] = [
       'Coletamos apenas informações necessárias para o funcionamento e para suporte técnico.',
     items: [
       'Preferências locais da extensão (ex.: idioma, configurações e opções habilitadas).',
-      'Dados de uso agregados (ex.: frequência de uso e eventos de erro).',
-      'Identificadores técnicos (ex.: versão da extensão e navegador).'
+      'Dados de uso agregados (ex.: frequência de uso, eventos de erro e tempo de resposta).',
+      'Identificadores técnicos (ex.: versão da extensão, navegador e sistema operacional).',
+      'Dados de suporte enviados voluntariamente (ex.: relatos de erro, capturas de tela e logs enviados pelo usuário).'
     ]
   },
   {
@@ -67,11 +68,22 @@ const SECTIONS: Section[] = [
     ]
   },
   {
+    title: 'Processamento dos dados',
+    description:
+      'O processamento ocorre localmente e, quando necessário, em serviços de suporte para análise de erros.',
+    items: [
+      'Preferências são processadas localmente no navegador do usuário.',
+      'Logs e métricas são agregados e anonimizados sempre que possível.',
+      'Dados enviados para suporte são processados exclusivamente para diagnóstico e resolução de problemas.'
+    ]
+  },
+  {
     title: 'Compartilhamento de dados',
     description:
       'Não compartilhamos seus dados com terceiros para fins comerciais.',
     items: [
       'Podemos compartilhar dados agregados e anonimizados para métricas internas.',
+      'Prestadores de serviço podem acessar dados de suporte apenas para execução do atendimento.',
       'Cumpriremos obrigações legais quando exigido por lei.'
     ]
   },
@@ -80,8 +92,19 @@ const SECTIONS: Section[] = [
     description:
       'Os dados locais ficam armazenados no seu navegador e podem ser removidos ao desinstalar a extensão.',
     items: [
-      'Logs técnicos são retidos pelo tempo necessário para análise de erros.',
-      'Você pode solicitar a exclusão de dados de suporte.'
+      'Preferências locais são mantidas até o usuário remover a extensão ou limpar os dados do navegador.',
+      'Logs técnicos são retidos pelo tempo necessário para análise de erros, com revisão periódica.',
+      'Dados de suporte podem ser excluídos mediante solicitação do usuário.'
+    ]
+  },
+  {
+    title: 'Segurança do armazenamento',
+    description:
+      'Adotamos medidas técnicas e organizacionais para reduzir riscos durante o armazenamento dos dados.',
+    items: [
+      'Criptografia em trânsito para dados enviados ao suporte.',
+      'Controles de acesso internos e revisão de permissões.',
+      'Minimização de dados: coletamos somente o necessário.'
     ]
   },
   {
@@ -142,7 +165,7 @@ function App() {
             <HeroMeta>
               <MetaItem>
                 <MetaLabel>Última atualização</MetaLabel>
-                <MetaValue>27 de janeiro de 2026</MetaValue>
+                <MetaValue>3 de fevereiro de 2026</MetaValue>
               </MetaItem>
               <MetaItem>
                 <MetaLabel>Versão da política</MetaLabel>
